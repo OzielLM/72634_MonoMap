@@ -2,13 +2,17 @@ version: '3.8'
 
 services:
   case-api:
-    build: .
+    image: oziellm/72634_monomap:latest
     container_name: case-api
     ports:
       - "3000:3000"
     environment:
-      PORT: 3000
-      MONGO_URL: mongodb://root:example@mongo/
+      PORT: ${PORT}
+      MONGO_URL: ${MONGO_URL_DOCKER}
+      MAIL_SECRET_KEY: ${MAIL_SECRET_KEY}
+      MAIL_SERVICE: ${MAIL_SERVICE}
+      MAIL_USER: ${MAIL_USER}
+      MAPBOX_ACCESS_TOKEN: ${MAPBOX_ACCESS_TOKEN}
     depends_on:
       - mongo
 
