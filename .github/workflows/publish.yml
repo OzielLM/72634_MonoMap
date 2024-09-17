@@ -1,0 +1,27 @@
+name: Docker Build & Publish
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build-and-push:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Clone code
+              uses: actions/checkout@v2
+
+            - name: Login to Docker hub
+              run: docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"
+
+            - name: Build Docker Image
+              run: docker build -t oziellm/72634_monomap:${{ github.sha}} .
+
+            - name: Tag Latest
+              run: docker tag oziellm/72634_monomap:${{ github.sha}} oziellm/72634_monomap:latest
+
+            - name: Push Docker Image
+              run: |
+                docker push oziellm/72634_monomap:${{ github.sha}}
+                docker push oziellm/72634_monomap:latest
