@@ -52,7 +52,8 @@ export class CaseController{
                 lat,
                 lng,
                 genre,
-                age
+                age,
+                isSent: false
             });
 
             const updatedCase = await CaseModel.findById(id);
