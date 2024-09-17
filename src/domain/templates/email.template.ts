@@ -8,7 +8,7 @@ export function generateCaseEmailTemplate(lat: number, lng: number, genre: strin
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Detalles del Casee</title>
+        <title>Detalles del Case</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -59,7 +59,7 @@ export function generateCaseEmailTemplate(lat: number, lng: number, genre: strin
     <body>
         <div class="container">
             <div class="header">
-                <h1>Detalles del Casee</h1>
+                <h1>Detalles del Case</h1>
             </div>
             <div class="content">
                 <p><strong>Genero de la persona con caso de Viruela:</strong> ${genre}</p>

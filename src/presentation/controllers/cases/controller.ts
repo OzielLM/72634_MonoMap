@@ -59,7 +59,7 @@ export class CaseController{
 
             return res.json(updatedCase)
         } catch (error) {
-            return res.json({message:"Ocurrio un error al actualizar un casee"});
+            return res.json({message:"Ocurrio un error al actualizar un case"});
         }
     }
 
@@ -67,9 +67,9 @@ export class CaseController{
         try {
             const { id } = req.params;
             await CaseModel.findByIdAndDelete(id);
-            return res.json({message:"Casee Eliminado"})
+            return res.json({message:"Case Eliminado"})
         } catch (error) {
-            return res.json({message:"Ocurrio un error al eliminar un casee"});
+            return res.json({message:"Ocurrio un error al eliminar un case"});
         }
     }
 }

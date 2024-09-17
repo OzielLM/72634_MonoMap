@@ -25,7 +25,7 @@ export const emailJob = () => {
                             subject: "Caso de Viruela del Mono",
                             htmlBody: htmlBody
                         });
-                        console.log(`Email enviado para el casee con ID: ${caso._id}`)
+                        console.log(`Email enviado para el case con ID: ${caso._id}`)
     
                         let updateCase = {
                             lat: caso.lat,
@@ -36,9 +36,9 @@ export const emailJob = () => {
                         };
     
                         await CaseModel.findByIdAndUpdate(caso._id, updateCase);
-                        console.log(`Casee actualizado para el ID: ${caso._id}`)
+                        console.log(`Case actualizado para el ID: ${caso._id}`)
                     } catch (error) {
-                        console.error("Error al procesar el casee")
+                        console.error("Error al procesar el case")
                     }
                 })
             );
