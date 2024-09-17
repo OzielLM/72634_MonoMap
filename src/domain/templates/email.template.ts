@@ -8,46 +8,42 @@ export function generateCaseEmailTemplate(lat: number, lng: number, genre: strin
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Detalles del Case</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
                 color: #333;
                 margin: 0;
                 padding: 0;
+                background-color: #f4f4f4;
             }
             .container {
-                width: 100%;
-                max-width: 600px;
-                margin: 20px auto;
-                background-color: #ffffff;
+                width: 80%;
+                margin: 0 auto;
+                background: #ffffff;
+                padding: 20px;
                 border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                overflow: hidden;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
             }
             .header {
-                background-color: #007BFF;
+                background: #1BA532;
                 color: #ffffff;
-                padding: 20px;
+                padding: 10px;
+                border-radius: 8px 8px 0 0;
                 text-align: center;
             }
-            .header h1 {
-                margin: 0;
-                font-size: 24px;
-            }
             .content {
-                padding: 20px;
+                margin: 20px 0;
             }
-            .content p {
-                margin: 10px 0;
+            .content h2 {
+                color: #1BA532;
             }
             .footer {
                 background-color: #f4f4f4;
-                color: #777;
-                padding: 10px;
                 text-align: center;
                 font-size: 12px;
+                color: #777;
+                padding: 10px;
+                border-radius: 0 0 8px 8px;
             }
             .map-img{
                 width: 100%;
@@ -55,13 +51,16 @@ export function generateCaseEmailTemplate(lat: number, lng: number, genre: strin
                 border-radius: 10px;
             }
         </style>
+        <title>Actualización de Salud: Caso de Viruela del Mono</title>
     </head>
     <body>
         <div class="container">
             <div class="header">
-                <h1>Detalles del Case</h1>
+                <h1>Actualización de Salud: Caso de Viruela del Mono</h1>
             </div>
             <div class="content">
+                <h2>Estimado Usuario,</h2>
+                <p>Nos dirigimos a usted para informarle sobre un reciente caso de viruela del mono reportado en nuestra comunidad</p>
                 <p><strong>Genero de la persona con caso de Viruela:</strong> ${genre}</p>
                 <p><strong>Edad de la persona con caso de Viruela:</strong> ${age}</p>
                 <p><strong>Latitud:</strong> ${lat}</p>
